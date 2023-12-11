@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>madollar.com</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>       
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript"></script>
+
+</head>
+<body>
+    <input type="checkbox" id="check">
+    <!--header area start-->
+    <header>
+    <label for="check">
+        <i class="fas fa-bars" id="sidebar_btn"></i>
+        
+    </label>
+    <div class="left_area">
+        <h3>MaDollar<span>xf</span></h3>
+        
+    </div>
+	<div class="search">
+	<input type=" text" id="searchBar" placeholder="  Search...">
+    <ul id="searchResults"></ul>
+	</div>
+    <div class="right_area">
+        <a href="#" class="fas fa-user"></a>
+    </div>
+    </header>
+    <div class="sidebar">
+        <a href="#" onclick="showContent('home')"><i class="fas fa-home"></i><span>  Home</span></a>
+        <a href="#" onclick="showContent('liveTrades')"><i class="fas fa-desktop"></i><span>  Live Trades</span></a>
+        <a href="#" onclick="showContent('executed')"><i class="fas fa-tachometer-alt"></i><span>  Executed</span></a>
+        <a href="#" onclick="showContent('news')"><i class="fas fa-chart-line"></i><span>  News</span></a>
+        <a href="#" onclick="showContent('feedbacks')"><i class="far fa-comments"></i><span>  Feedbacks</span></a>
+        <a href="#" onclick="showContent('resources')"><i class="fas fa-database"></i><span>  Resources</span></a>
+        <a href="#" onclick="showContent('settings')"><i class="fas fa-sliders-h"></i><span>  Settings</span></a>
+    </div>
+    <div class="content" id="content">
+        <div id="background-section">
+            <!-- Use an iframe to import the content of another HTML page as a background -->
+            <iframe id="background-iframe" src="homee.html"></iframe>
+        
+            <!-- Your main content goes here -->
+            <div>
+        
+    </div>
+    <script>
+        function showContent(contentType) {
+            var contentDiv = document.getElementById('content');
+            switch (contentType) {
+                case 'home':
+                    contentDiv.innerHTML = '<div class="container">The foreign exchange market is a global decentralized or over-the-counter market for the trading of currencies. This market determines foreign exchange rates for every currency. It includes all aspects of buying, selling and exchanging currencies at current or determined prices </div>';
+
+
+
+                    break;
+                case 'liveTrades':
+                    contentDiv.innerHTML = '<h2>Live Trades Content Goes Here</h2>';
+
+
+                    break;
+                case 'executed':
+                    contentDiv.innerHTML = '<h2>Executed Trades Content Goes Here</h2>';
+
+
+                    break;
+                case 'news':
+                    contentDiv.innerHTML = '<h2>News</h2>';
+
+
+                    break;
+                case 'feedbacks':
+                    contentDiv.innerHTML = '<h2>Feedbacks Content Goes Here</h2>';
+
+
+                    break;
+                case 'resources':
+                    contentDiv.innerHTML = '<h2>Resources Content Goes Here</h2>';
+
+
+                    break;
+                case 'settings':
+                    contentDiv.innerHTML = '<h2>Settings Content Goes Here</h2>';
+
+
+                    break;
+                default:
+                    contentDiv.innerHTML = '<h2>Default Content Goes Here</h2>';
+
+            }
+        }
+    </script>
+    
+    <script type="text/javascript">
+    $(document).ready(function(){
+    $('.nav_btn').click(function(){
+        $('.mobile_nav_items').toggleClass('active');
+    });
+    });
+    
+    </script>
+
+
+</body>
+</html>
+
+

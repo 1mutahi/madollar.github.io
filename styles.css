@@ -1,0 +1,207 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    background: url('https://trade.metatrader5.com/terminal') no-repeat center center fixed;
+    background-size: cover;
+    background-color: black;
+}
+
+header{
+    z-index: 1;
+    position: fixed;
+    background: #22242A;
+    padding: 20px;
+    width: calc(100% - 0%);
+    top: 0;
+    height: 8px;
+}
+
+.left_area h3{
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 900;
+    margin-left: 40px;
+}
+
+.left_area span{
+    color: #19B3D3;
+}
+
+.right_area{
+    padding: 10px;
+    float: right;
+    margin-top: -57px;
+    margin-right: 25px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #19B3D3;
+    
+    
+}
+
+.right_area:hover{
+    background: #cddde0;
+}
+.search {
+	
+	margin-top: -44px;
+	padding: 10px;
+	margin-left: 200px;
+}
+#searchBar {
+	width: 400px;
+	height: 25px;
+    border: yes;	
+	border-color: #19B3D3;
+    border-radius: 30px;
+    background-color: #22242A;
+    font-size: 16px;
+    
+}
+#searchBar:focus {
+            outline: none;
+            border-color: blue;
+            box-shadow: 0 0 20px rgba(52, 152, 219, 0.7);
+        }
+.sidebar{
+    z-index: 1;
+    top: 0;
+    background: #22242A;
+    margin-top: 40px;
+    padding-top: 20px;
+    position: fixed;
+    left: 0;
+    width: 130px;
+    border-radius: 11px;
+    transition-property: left;
+    font-size: 12px;
+    display: block;
+}
+
+.sidebar a{
+    color: #faf7f7;
+    display: block;
+    width: 100%;
+    line-height: 45px;
+    text-decoration: none;
+    padding-left: 10px;
+    box-sizing: border-box;
+    
+}
+
+.sidebar a:hover{
+    background: #19B3D3;
+    border-radius: 15px;
+}
+
+.sidebar i{
+    padding-left: 10px;
+}
+
+label #sidebar_btn{
+    z-index: 1;
+    color: #19B3D3;
+    position: fixed;
+    cursor: pointer;
+    left: 14px;
+    font-size: 20px;
+    margin: 5px 0;
+    transition: 0.1s;
+    transition-property: color;
+}
+
+label #sidebar_btn:hover{
+    color: #19B3D3;
+}
+
+#check:checked ~ .sidebar{
+    left: -185px;
+}
+
+#check:checked ~ .sidebar a span{
+    display: none;
+}
+.content{
+    width: (100% - 1px);
+    margin-top: 10px;
+    padding: 20px;
+    margin-left: 1px;
+    
+    height: 70px;
+    color: white;
+}
+
+#check:checked ~ .content{
+    margin-left: 60px;
+}
+
+#check:checked ~ .sidebar .profile_info{
+    display: none;
+}
+
+#check{
+    display: none;
+}
+.container {
+    width: 150px;
+    height: auto;
+    background-color: #0c0c0c;
+	position: center;
+    padding: 40px;  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#background-section {
+    position: fixed;
+    width: 100px;
+    height: 100vh;
+    background: cover;
+}
+
+#background-iframe {
+    position: fixed;
+    top: 30px;
+    left: 0;
+	max-width: 97%;
+    width: 900px;
+    height: 100%;
+    border: none; /* Remove border for iframe */
+    pointer-events: yes;
+}
+
+
+
+@media only screen and (max-width: 480px) {
+	.search {
+	
+	margin-top: -37px;
+	padding: 10px;
+	margin-left: 115px;
+}
+    #searchBar {
+	width: 197px;
+	height: 25px;
+    border: yes;	
+	border-color: #19B3D3;
+    border-radius: 30px;
+    background-color: #22242A;
+    font-size: 16px;
+    
+}
+   .left_area h3{
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+.left_area span{
+    color: #19B3D3;
+}
+
+}
