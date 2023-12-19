@@ -164,7 +164,7 @@ label #sidebar_btn:hover{
 
 
 .tradingview-widget-container {
-	height: 90vh;
+	height: 80vh;
 	width: device-width;
 	background: cover;
 			
@@ -172,7 +172,7 @@ label #sidebar_btn:hover{
 #tradingview_654c1 {
 	border: yes;
 	margin-top: 38px;
-    height: 90vh;
+    height: 80vh;
 	width: device-width;
 	background: cover;
 			
