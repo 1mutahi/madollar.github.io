@@ -12,7 +12,7 @@
 
 </head>
 <body>
-    <input type="checkbox" id="check">
+    <input type="checkbox" id="check" placeholder="check">
     <!--header area start-->
     <header>
     <label for="check">
@@ -20,17 +20,18 @@
         
     </label>
     <div class="left_area">
-        <h3>MaDollar<span>xf</span></h3>
+        <h3>MaDollar<span>FX</span></h3>
         
     </div>
 	<div class="search">
-	<input type=" text" id="searchBar" placeholder="  Search...">
+	<input type=" text" id="searchBar" placeholder="     Search...">
     <ul id="searchResults"></ul>
 	</div>
     <div class="right_area">
-        <a href="#" class="fas fa-user"></a>
+        <a href="#" class="fas fa-user">.</a>
     </div>
     </header>
+	
     <div class="sidebar">
         <a href="#" onclick="showContent('home')"><i class="fas fa-home"></i><span>  Home</span></a>
         <a href="#" onclick="showContent('liveTrades')"><i class="fas fa-desktop"></i><span>  Live Trades</span></a>
@@ -40,16 +41,32 @@
         <a href="#" onclick="showContent('resources')"><i class="fas fa-database"></i><span>  Resources</span></a>
         <a href="#" onclick="showContent('settings')"><i class="fas fa-sliders-h"></i><span>  Settings</span></a>
     </div>
-    <div class="content" id="content">
-        <div id="background-section">
-            <!-- Use an iframe to import the content of another HTML page as a background -->
-            <iframe id="background-iframe" src="homee.html"></iframe>
-        
-            <!-- Your main content goes here -->
-            <div>
-        
-    </div>
-    <script>
+    <div class="tradingview-widget-container">
+<div id="tradingview_654c1"></div>
+<script type="text/javascript">
+new TradingView.widget(
+{
+"autosize": true,
+"symbol": "FX:EURUSD",
+"interval": "1",
+"timezone": "Etc/UTC",
+"theme": "dark",
+"style": "1",
+"locale": "en",
+"enable_publishing": false,
+"allow_symbol_change": true,
+"container_id": "tradingview_654c1"
+}
+);
+
+</script>
+
+
+<!--<textarea class="animated-input" id="message" name="message" rows="6" required></textarea>-->
+
+
+</div>
+    <script type="text/javascript">
         function showContent(contentType) {
             var contentDiv = document.getElementById('content');
             switch (contentType) {
@@ -70,7 +87,7 @@
 
                     break;
                 case 'news':
-                    contentDiv.innerHTML = '<h2>News</h2>';
+                    contentDiv.innerHTML = '<h2>News contents goes here.</h2>';
 
 
                     break;
@@ -93,15 +110,15 @@
                     contentDiv.innerHTML = '<h2>Default Content Goes Here</h2>';
 
             }
-        }
-    </script>
+}
+</script>
     
     <script type="text/javascript">
     $(document).ready(function(){
     $('.nav_btn').click(function(){
         $('.mobile_nav_items').toggleClass('active');
     });
-    });
+});
     
     </script>
 
